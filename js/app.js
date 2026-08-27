@@ -54,13 +54,6 @@ function initDynamicContent(config) {
   document.getElementById("nikkah-venue").textContent = config.nikkah.venueName;
   document.getElementById("nikkah-address").textContent = config.nikkah.address;
   document.getElementById("nikkah-attire").textContent = `Attire: ${config.nikkah.attire}`;
-
-  // Reception Card
-  document.getElementById("reception-date").textContent = config.reception.dateFormatted;
-  document.getElementById("reception-time").textContent = config.reception.timeFormatted;
-  document.getElementById("reception-venue").textContent = config.reception.venueName;
-  document.getElementById("reception-address").textContent = config.reception.address;
-  document.getElementById("reception-attire").textContent = `Attire: ${config.reception.attire}`;
 }
 
 /** Scroll IntersectionObserver for soft gold fade-in */

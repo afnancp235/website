@@ -8,11 +8,11 @@ const WEDDING_CONFIG = {
     groom: "Murshid",
     bride: "Shahana",
     monogramText: "M & S",
-    tagline: "Together with their families, invite you to share in their joy as they celebrate their Nikkah & Wedding",
+    tagline: "Together with their families, invite you to share in their joy as they celebrate their Nikkah",
   },
 
-  // Target Wedding Date for Live Countdown (YYYY-MM-DDTHH:mm:ss)
-  weddingDate: "2026-12-26T10:30:00",
+  // Target Wedding Date (YYYY-MM-DDTHH:mm:ss)
+  weddingDate: "2026-08-30T11:00:00",
 
   // Quranic / Romantic Islamic Verse
   verse: {
@@ -25,27 +25,14 @@ const WEDDING_CONFIG = {
   // Nikkah Details
   nikkah: {
     title: "The Nikkah Ceremony",
-    dateFormatted: "Saturday, December 26, 2026",
-    timeFormatted: "10:30 AM IST",
-    venueName: "Grand Palace Auditorium",
-    address: "Kochi-Trivandrum Highway, Calicut / Kochi, Kerala, India",
-    googleMapsUrl: "https://maps.google.com/?q=Grand+Palace+Auditorium+Kochi",
-    appleMapsUrl: "http://maps.apple.com/?q=Grand+Palace+Auditorium+Kochi",
+    dateFormatted: "Sunday, 30 August 2026",
+    timeFormatted: "11:00 AM",
+    venueName: "Silsila Park Auditorium",
+    address: "Kerala, India",
+    googleMapsUrl: "https://maps.app.goo.gl/PcuyQYgZzU4qcsQT7",
+    appleMapsUrl: "https://maps.app.goo.gl/PcuyQYgZzU4qcsQT7",
     attire: "Traditional Luxury / Formal Ethnic",
     description: "The solemnization of holy matrimony in the presence of family and loved ones.",
-  },
-
-  // Reception / Walima Details
-  reception: {
-    title: "The Royal Reception",
-    dateFormatted: "Saturday, December 26, 2026",
-    timeFormatted: "06:30 PM Onwards",
-    venueName: "The Leela Palace Ballroom",
-    address: "Marine Drive, Kochi, Kerala, India",
-    googleMapsUrl: "https://maps.google.com/?q=The+Leela+Palace+Kochi",
-    appleMapsUrl: "http://maps.apple.com/?q=The+Leela+Palace+Kochi",
-    attire: "Black Tie / Elegant Evening Wear",
-    description: "An evening of celebration, feast, music, and joyful togetherness.",
   },
 
   // Map Embed URL for Interactive Modal
@@ -53,11 +40,9 @@ const WEDDING_CONFIG = {
 
   // RSVP Options & Settings
   rsvp: {
-    deadline: "December 10, 2026",
+    deadline: "August 20, 2026",
     events: [
-      { id: "both", label: "Nikkah & Reception" },
-      { id: "nikkah", label: "Nikkah Only" },
-      { id: "reception", label: "Reception Only" },
+      { id: "attending", label: "Joyfully Accept" },
       { id: "decline", label: "Regretfully Decline" },
     ],
     dietaryOptions: [
