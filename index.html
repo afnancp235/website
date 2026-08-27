@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Save the Date — Murshid & Shahana</title>
+  <meta name="description" content="Save the Date for the luxury wedding celebration of Murshid & Shahana. Nikkah & Reception details, RSVP, and countdown.">
+  
+  <!-- Open Graph / Social Sharing Meta -->
+  <meta property="og:title" content="Save the Date — Murshid & Shahana">
+  <meta property="og:description" content="Together with their families, Murshid & Shahana invite you to celebrate their Nikkah & Wedding.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💍</text></svg>">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Floating Background Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Top Floating Controls -->
+  <div class="top-control-bar">
+    <button id="audio-toggle-btn" class="audio-toggle-btn" title="Toggle Ambient Sound">
+      <span class="audio-icon">🔇</span> Sound: Off
+    </button>
+  </div>
+
+  <div class="app-wrapper">
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section fade-in-up">
+      <div class="hero-background-art"></div>
+
+      <!-- Bismillah Arabic Calligraphy -->
+      <div class="bismillah-text">
+        بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+      </div>
+
+      <div class="save-the-date-tag">Save the Date</div>
+
+      <!-- Monogram Emblem -->
+      <div class="monogram-emblem">
+        <img src="assets/monogram_ring.jpg" alt="Islamic Gold Monogram Ring" class="monogram-ring-img">
+        <span class="monogram-initials">M & S</span>
+      </div>
+
+      <!-- Main Couple Names -->
+      <h1 class="couple-names">
+        <span class="groom-name">Murshid</span>
+        <span class="ampersand">&</span>
+        <span class="bride-name">Shahana</span>
+      </h1>
+
+      <p class="hero-tagline">
+        Together with their families, invite you to share in their joy as they celebrate their Nikkah & Wedding
+      </p>
+
+      <div class="gold-divider">
+        <span class="gold-divider-icon">❖</span>
+      </div>
+
+      <div id="hero-date-location" class="hero-date-location">
+        <!-- Rendered via JS config -->
+      </div>
+    </section>
+
+
+    <!-- ==================== ISLAMIC VERSE SECTION ==================== -->
+    <section class="fade-in-up">
+      <div class="luxury-frame verse-container">
+        <div id="verse-arabic" class="verse-arabic">
+          وَخَلَقْنَاكُمْ أَزْوَاجًا
+        </div>
+        <div id="verse-translation" class="verse-translation">
+          “And We created you in pairs.”
+        </div>
+        <div id="verse-source" class="verse-source">
+          Surah An-Naba [78:8]
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== COUNTDOWN TIMER SECTION ==================== -->
+    <section class="countdown-section fade-in-up">
+      <div class="section-title">The Countdown</div>
+      <h2 class="section-subtitle">Counting Down to the Big Day</h2>
+
+      <div class="countdown-grid">
+        <div class="countdown-card luxury-frame">
+          <div id="cd-days" class="countdown-value text-gold-gradient">00</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-card luxury-frame">
+          <div id="cd-hours" class="countdown-value text-gold-gradient">00</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-card luxury-frame">
+          <div id="cd-minutes" class="countdown-value text-gold-gradient">00</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-card luxury-frame">
+          <div id="cd-seconds" class="countdown-value text-gold-gradient">00</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== EVENTS SCHEDULE SECTION ==================== -->
+    <section class="events-section fade-in-up">
+      <div class="section-title">Events Schedule</div>
+      <h2 class="section-subtitle">Celebration Details</h2>
+
+      <div class="events-grid">
+        
+        <!-- Nikkah Card -->
+        <div class="event-card luxury-frame">
+          <div>
+            <span class="event-badge">Holy Matrimony</span>
+            <h3 class="event-title">Nikkah Ceremony</h3>
+            <div class="gold-divider">
+              <span class="gold-divider-icon">❖</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">📅</span>
+              <span id="nikkah-date">Saturday, December 26, 2026</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">⏰</span>
+              <span id="nikkah-time">10:30 AM IST</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">📍</span>
+              <span id="nikkah-venue" class="event-venue-name">Grand Palace Auditorium</span>
+            </div>
+            <p id="nikkah-address" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">
+              Kochi, Kerala, India
+            </p>
+            <p id="nikkah-attire" style="font-size: 0.85rem; color: var(--gold-dark); margin-top: 10px; font-weight: 500;">
+              Attire: Traditional Luxury
+            </p>
+          </div>
+
+          <div class="event-actions">
+            <button id="nikkah-cal-btn" class="btn-primary">
+              <span>📅</span> Add to Google Calendar
+            </button>
+            <button class="btn-secondary open-map-btn" data-event="nikkah">
+              <span>📍</span> View Location Map
+            </button>
+          </div>
+        </div>
+
+        <!-- Reception Card -->
+        <div class="event-card luxury-frame">
+          <div>
+            <span class="event-badge">Walima Celebration</span>
+            <h3 class="event-title">Royal Reception</h3>
+            <div class="gold-divider">
+              <span class="gold-divider-icon">❖</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">📅</span>
+              <span id="reception-date">Saturday, December 26, 2026</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">⏰</span>
+              <span id="reception-time">06:30 PM Onwards</span>
+            </div>
+            <div class="event-detail-row">
+              <span class="event-detail-icon">📍</span>
+              <span id="reception-venue" class="event-venue-name">The Leela Palace Ballroom</span>
+            </div>
+            <p id="reception-address" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">
+              Marine Drive, Kochi, Kerala
+            </p>
+            <p id="reception-attire" style="font-size: 0.85rem; color: var(--gold-dark); margin-top: 10px; font-weight: 500;">
+              Attire: Elegant Evening Wear
+            </p>
+          </div>
+
+          <div class="event-actions">
+            <button id="reception-cal-btn" class="btn-primary">
+              <span>📅</span> Add to Google Calendar
+            </button>
+            <button class="btn-secondary open-map-btn" data-event="reception">
+              <span>📍</span> View Location Map
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ==================== RSVP CALL TO ACTION ==================== -->
+    <section class="fade-in-up">
+      <div class="luxury-frame rsvp-cta-section">
+        <span class="event-badge">Your Presence is Our Blessing</span>
+        <h2 class="section-subtitle" style="margin-bottom: 16px;">Will You Join Us?</h2>
+        <p style="color: var(--text-muted); max-width: 500px; margin: 0 auto 28px auto;">
+          Please let us know if you will be celebrating with us by filling out a quick RSVP.
+        </p>
+        <button class="btn-primary open-rsvp-btn" style="padding: 16px 40px; font-size: 0.9rem;">
+          ✨ RSVP Now
+        </button>
+      </div>
+    </section>
+
+
+    <!-- ==================== CLOSING & FOOTER ==================== -->
+    <footer class="footer-section fade-in-up">
+      <div class="gold-divider" style="margin-bottom: 32px;">
+        <span class="gold-divider-icon">❖</span>
+      </div>
+      <h2 class="footer-closing">
+        “We look forward to celebrating with you.”
+      </h2>
+      <div class="footer-monogram">— MURSHID & SHAHANA —</div>
+    </footer>
+
+  </div> <!-- End App Wrapper -->
+
+
+  <!-- ==================== RSVP MODAL ==================== -->
+  <div id="rsvp-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button id="close-rsvp-btn" class="modal-close-btn">&times;</button>
+      <div style="text-align: center; margin-bottom: 24px;">
+        <span class="event-badge">Invitation Confirmation</span>
+        <h3 style="font-size: 2rem;">RSVP</h3>
+        <div class="gold-divider" style="margin: 12px auto;">
+          <span class="gold-divider-icon">❖</span>
+        </div>
+      </div>
+
+      <form id="rsvp-form">
+        <div class="form-group">
+          <label class="form-label" for="rsvp-name">Your Full Name *</label>
+          <input type="text" id="rsvp-name" class="form-input" placeholder="e.g. Faisal & Family" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="rsvp-attendance">Attending Events *</label>
+          <select id="rsvp-attendance" class="form-select" required>
+            <!-- Options populated by config -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="rsvp-guests">Number of Guests *</label>
+          <input type="number" id="rsvp-guests" class="form-input" min="1" max="10" value="1" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="rsvp-notes">Personal Message / Wishes</label>
+          <textarea id="rsvp-notes" class="form-textarea" rows="3" placeholder="Send your prayers and blessings to Murshid & Shahana..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 12px;">
+          Send RSVP Confirmation
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ==================== MAP MODAL ==================== -->
+  <div id="map-modal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 680px;">
+      <button id="close-map-btn" class="modal-close-btn">&times;</button>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <span class="event-badge">Navigation & Directions</span>
+        <h3 style="font-size: 1.8rem;">Venue Location Map</h3>
+      </div>
+
+      <div style="border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--gold-border); margin-bottom: 20px;">
+        <iframe id="map-iframe" width="100%" height="320" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a id="google-maps-direct" href="#" target="_blank" class="btn-primary">
+          <span>🗺️</span> Open in Google Maps
+        </a>
+        <a id="apple-maps-direct" href="#" target="_blank" class="btn-secondary">
+          <span>🍎</span> Open in Apple Maps
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
