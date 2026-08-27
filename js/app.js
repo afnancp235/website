@@ -9,9 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize UI content from config
   initDynamicContent(config);
 
-  // Start Live Countdown
-  initCountdown(config.weddingDate);
-
   // Initialize Canvas Gold Dust Particles
   initGoldParticles();
 
@@ -64,41 +61,6 @@ function initDynamicContent(config) {
   document.getElementById("reception-venue").textContent = config.reception.venueName;
   document.getElementById("reception-address").textContent = config.reception.address;
   document.getElementById("reception-attire").textContent = `Attire: ${config.reception.attire}`;
-
-  // Calendar Event Buttons Setup
-  setupCalendarButton("nikkah-cal-btn", config.nikkah, config.couple);
-  setupCalendarButton("reception-cal-btn", config.reception, config.couple);
-}
-
-/** Live Countdown Engine */
-function initCountdown(targetDateStr) {
-  const targetDate = new Date(targetDateStr).getTime();
-
-  function update() {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
-
-    if (distance < 0) {
-      document.getElementById("cd-days").textContent = "00";
-      document.getElementById("cd-hours").textContent = "00";
-      document.getElementById("cd-minutes").textContent = "00";
-      document.getElementById("cd-seconds").textContent = "00";
-      return;
-    }
-
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("cd-days").textContent = String(days).padStart(2, "0");
-    document.getElementById("cd-hours").textContent = String(hours).padStart(2, "0");
-    document.getElementById("cd-minutes").textContent = String(minutes).padStart(2, "0");
-    document.getElementById("cd-seconds").textContent = String(seconds).padStart(2, "0");
-  }
-
-  update();
-  setInterval(update, 1000);
 }
 
 /** Scroll IntersectionObserver for soft gold fade-in */
@@ -251,21 +213,7 @@ function initMapModal(config) {
   }
 }
 
-/** Generate Add to Google Calendar link */
-function setupCalendarButton(btnId, eventData, coupleData) {
-  const btn = document.getElementById(btnId);
-  if (!btn) return;
 
-  btn.addEventListener("click", () => {
-    const title = encodeURIComponent(`${coupleData.groom} & ${coupleData.bride} — ${eventData.title}`);
-    const details = encodeURIComponent(`${eventData.description}\nVenue: ${eventData.venueName}`);
-    const location = encodeURIComponent(`${eventData.venueName}, ${eventData.address}`);
-
-    // Standard Google Calendar link
-    const gCalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&details=${details}&location=${location}`;
-    window.open(gCalUrl, "_blank");
-  });
-}
 
 /** Ambient Sound Audio Controller */
 function initAudioPlayer(audioConfig) {
